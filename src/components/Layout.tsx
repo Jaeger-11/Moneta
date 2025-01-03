@@ -8,7 +8,7 @@ const Layout = () => {
       <aside className="">
         <Sidebar/>
       </aside>
-      <div className="flex-1 flex h-svh flex-col bg-light">
+      <div className="flex-1 flex h-screen flex-col bg-light">
         <Header/>
         <div className="flex-1 flex flex-col"><Outlet/></div>
       </div>

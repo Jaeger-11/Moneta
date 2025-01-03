@@ -13,3 +13,15 @@
 .svgactive svg, .svgactive:hover svg{
     @apply fill-white
 }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px lightblue;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-primaryDeep;
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    width: 3px;
+}

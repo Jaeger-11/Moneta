@@ -1,4 +1,5 @@
 import { InvestIcon, TransferIcon } from "../components/Icons"
+import Transactions from "../components/Transactions"
 
 const Transaction = () => {
   return (
@@ -27,119 +28,38 @@ const Transaction = () => {
             <main className="flex-1 flex gap-2">
                 <div className="overflow-y-scroll flex-1">
                 <section className="border-x border-t border-neutral max-h-[65svh] p-2 mr-1">
-                    <section className="flex flex-col gap-2 ">
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <TransferIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer To Moniepoint
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-negative">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer From AGB Limited
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-positive">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer To Investments
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-negative">₦ 7,450</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer From AGB Limited
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-positive">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer From AGB Limited
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-positive">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer To AB plc
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2022</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-negative">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer From AGB Limited
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-positive">₦ 5,850</p>
-                        </div>
-
-                        <div className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
-                            <div className="col-span-2 flex gap-2 items-center ">
-                                <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
-                                    <InvestIcon/>
-                                </div>
-                                <p className="text-sm font-medium flex flex-col leading-tight">
-                                    Transfer From AGB Limited
-                                    <span className="text-gray-400 text-xs font-semibold leading-tight">20 Nov 2021</span>
-                                </p>
-                            </div>
-                            <p className="text-right font-semibold text-positive">₦ 5,850</p>
-                        </div>
-                    </section>
+                    <Transactions/>
                 </section>
                 </div>
                 
                 
-                <section className="border border-neutral bg-white p-2 flex-1">
+                <section className="border border-neutral overflow-y-scroll bg-white p-2 lg:p-4 flex-1">
                     <h3 className="font-semibold text-lg">Transaction Details</h3>
-                    <section>
-                        
+                    <section className="flex flex-col gap-2 h-[50svh]">
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Amount</h4>
+                            <div className="text-lg font-semibold">₦ 5,850</div>
+                        </div>
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Sender Details</h4>
+                            <div className="text-sm font-medium leading-tight"> AGB Limited | Moniepoint - 70689****90 </div>
+                        </div>
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Transaction Type</h4>
+                            <div className="text-sm font-medium"> Transfer To Account </div>
+                        </div>
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Transaction Number</h4>
+                            <div className="text-sm font-medium"> 234589092383402 </div>
+                        </div>
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Transaction Date</h4>
+                            <div className="text-sm font-medium"> Nov 21st, 2021 23:34:12 </div>
+                        </div>
+                        <div className="border-b pb-1">
+                            <h4 className="text-sm text-primaryLight font-medium">Remark</h4>
+                            <div className="text-sm font-medium"> Furniture Deposit </div>
+                        </div>
                     </section>
                 </section>
             </main>

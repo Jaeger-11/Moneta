@@ -1,0 +1,67 @@
+[
+    {
+      "id": "txn001",
+      "date": "2021-11-21T23:34:12",
+      "description": "Transfer to Moniepoint",
+      "amount": 5850,
+      "type": "debit",
+      "category": "Transfer",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "Moniepoint - 70689****90"
+      },
+      "transactionType": "Transfer To Account",
+      "transactionNumber": "234589092383402",
+      "remark": "Monthly subscription payment"
+    },
+    {
+      "id": "txn002",
+      "date": "2025-01-01T10:15:00",
+      "description": "Salary from AGB Limited",
+      "amount": 15850,
+      "type": "credit",
+      "category": "Income",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "AGB Limited Payroll - 12345****67"
+      },
+      "transactionType": "Salary Payment",
+      "transactionNumber": "564738292847503",
+      "remark": "December 2024 Salary"
+    },
+    {
+      "id": "txn003",
+      "date": "2024-12-31T15:45:22",
+      "description": "Groceries at MegaMart",
+      "amount": 3250,
+      "type": "debit",
+      "category": "Shopping",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "MegaMart - 78965****43"
+      },
+      "transactionType": "Card Payment",
+      "transactionNumber": "129485902347590",
+      "remark": "Weekly grocery shopping"
+    },
+    {
+      "id": "txn004",
+      "date": "2024-12-30T12:10:45",
+      "description": "Electricity Bill Payment",
+      "amount": 4500,
+      "type": "debit",
+      "category": "Utilities",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "PowerGen - 47890****12"
+      },
+      "transactionType": "Bill Payment",
+      "transactionNumber": "348590238750239",
+      "remark": "December electricity bill"
+    }
+  ]
+  

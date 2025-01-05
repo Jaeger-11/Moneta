@@ -62,6 +62,102 @@
       "transactionType": "Bill Payment",
       "transactionNumber": "348590238750239",
       "remark": "December electricity bill"
+    },
+    {
+      "id": "txn005",
+      "date": "2025-01-01T10:15:00",
+      "description": "Salary from AGB Limited",
+      "amount": 21850,
+      "type": "credit",
+      "category": "Income",
+      "status": "successful",
+      "details": {
+        "name": "Investment Interest",
+        "account": "AGB Securities Plc - 122905****67"
+      },
+      "transactionType": "Salary Payment",
+      "transactionNumber": "564738292847503",
+      "remark": "December 2024 Salary"
+    },
+    {
+      "id": "txn006",
+      "date": "2024-12-31T15:45:22",
+      "description": "Groceries at MegaMart",
+      "amount": 8250,
+      "type": "debit",
+      "category": "Shopping",
+      "status": "successful",
+      "details": {
+        "name": "Megamart Ilorin",
+        "account": "MegaMart - 78965****43"
+      },
+      "transactionType": "Card Payment",
+      "transactionNumber": "129485902347590",
+      "remark": "Weekly grocery shopping"
+    },
+    {
+      "id": "txn007",
+      "date": "2024-12-30T12:10:45",
+      "description": "Electricity Bill Payment",
+      "amount": 3500,
+      "type": "debit",
+      "category": "Utilities",
+      "status": "successful",
+      "details": {
+        "name": "PowerGen Int.",
+        "account": "PowerGen - 47890****12"
+      },
+      "transactionType": "Bill Payment",
+      "transactionNumber": "348590238750239",
+      "remark": "December electricity bill"
+    },
+    {
+      "id": "txn008",
+      "date": "2025-01-01T10:15:00",
+      "description": "Salary from AGB Limited",
+      "amount": 25850,
+      "type": "credit",
+      "category": "Income",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "AGB Limited Payroll - 12345****67"
+      },
+      "transactionType": "Salary Payment",
+      "transactionNumber": "564738292847503",
+      "remark": "December 2024 Salary"
+    },
+    {
+      "id": "txn009",
+      "date": "2024-12-31T15:45:22",
+      "description": "Groceries at MegaMart",
+      "amount": 3250,
+      "type": "debit",
+      "category": "Shopping",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "MegaMart - 78965****43"
+      },
+      "transactionType": "Card Payment",
+      "transactionNumber": "129485902347590",
+      "remark": "Weekly grocery shopping"
+    },
+    {
+      "id": "txn010",
+      "date": "2024-12-30T12:10:45",
+      "description": "Electricity Bill Payment",
+      "amount": 10500,
+      "type": "debit",
+      "category": "Utilities",
+      "status": "successful",
+      "details": {
+        "name": "AGB Limited",
+        "account": "PowerGen - 47890****12"
+      },
+      "transactionType": "Bill Payment",
+      "transactionNumber": "348590238750239",
+      "remark": "December water bill"
     }
   ]
   

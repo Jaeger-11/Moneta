@@ -13,7 +13,7 @@ import { getTransactions, setActive } from "../features/transactionSlice";
 
 const Transactions = () => {
     const dispatch = useDispatch();
-    const { transactions } = useSelector((state:any) => state.transaction)
+    const { transactions, active } = useSelector((state:any) => state.transaction)
 
     // useEffect(() => {
     //     axios.get('/data.json')
@@ -35,7 +35,7 @@ const Transactions = () => {
             transactions.map((transaction:TransactionType, index:number) => {
                 const { date, description, type, amount, id } = transaction
                 return (
-                    <div key={index} onClick={() => switchActive(id)} className="border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer">
+                    <div key={index} onClick={() => switchActive(id)} className={`${transaction === active && 'bg-primaryLight text-white hover:bg-primaryLight'} border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer`}>
                         <div className="col-span-2 flex gap-2 items-center ">
                             <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
                                 { type.toLowerCase() === 'debit' ? <TransferIcon/> : <InvestIcon/>}

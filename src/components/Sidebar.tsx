@@ -5,9 +5,9 @@ import { LoansIcon, LogoutIcon, OverviewIcon, SettingsIcon, TransactionIcon } fr
 const Sidebar = () => {
     const pathname = useLocation().pathname;
     const [minimize, setMinimize] = useState<Boolean>(false);
-    const toggleSidebar = () => {
-        setMinimize((minimize) => !minimize);
-    }
+    // const toggleSidebar = () => {
+    //     setMinimize((minimize) => !minimize);
+    // }
 
     const navcontents = [
         {

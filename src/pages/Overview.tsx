@@ -1,4 +1,5 @@
 import { InvestIcon, TransferIcon } from "../components/Icons"
+import RecentTransactions from "../components/RecentTransactions"
 
 const Overview = () => {
   return (
@@ -40,8 +41,8 @@ const Overview = () => {
             </div>
           </section>
 
-          <div className="flex-1 bg-lightGray">
-
+          <div className="flex-1 border">
+            <RecentTransactions/>
           </div>
         </section>
           

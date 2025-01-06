@@ -22,7 +22,8 @@ const initialState = {
     } as TransactionType,
     totalTransactions: 0 as number,
     loading: false,
-    error: null as string | null
+    error: null as string | null,
+    totalBalance: 934900 as number
 }
 
 export const getTransactions = createAsyncThunk('transactions/getTransactions', async (_, {rejectWithValue}) => {

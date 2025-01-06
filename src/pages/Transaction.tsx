@@ -1,24 +1,26 @@
 import Transactions from "../components/Transactions"
-import { TransactionType } from "../interface";
 import { useSelector } from "react-redux";
+import { currencyFormat } from "../utils";
+import { TransactionType } from "../interface";
 
 const Transaction = () => {
-    const { totalTransactions, active } = useSelector((state:any) => state.transaction)
-    console.log(active)
-  return (
+    const { totalTransactions, transactions, active} = useSelector((state:any) => state.transaction)
+    const totalDebit = transactions.filter((transaction:TransactionType) => transaction.type.toLowerCase() === 'debit').reduce((acc:number, transaction:TransactionType) => acc + transaction.amount, 0)
+    const totalCredit = transactions.filter((transaction:TransactionType) => transaction.type.toLowerCase() === 'credit').reduce((acc:number, transaction:TransactionType) => acc + transaction.amount, 0)
+    return (
     <div className="p-2 lg:p-4 text-base flex-1 flex flex-col gap-6">
         <section className="flex flex-wrap gap-3">
             <div className="p-2 px-4 rounded-sm shadow-md bg-neutral min-w-48">
                 <span className="text-gray-400 text-sm">Total Balance</span>
-                <p className="text-xl font-semibold mt-2">₦ 1,850,700</p>
+                <p className="text-xl font-semibold mt-2">₦ {currencyFormat(totalCredit - totalDebit)}</p>
             </div>
             <div className="p-2 px-4 rounded-sm shadow-md bg-white min-w-48">
                 <span className="text-gray-400 text-sm">Inflow</span>
-                <p className="text-xl font-semibold mt-2 text-positive">₦ 3,850,700</p>
+                <p className="text-xl font-semibold mt-2 text-positive">₦ {currencyFormat(totalCredit)}</p>
             </div>
             <div className="p-2 px-4 rounded-sm shadow-md bg-white min-w-48">
                 <span className="text-gray-400 text-sm">Outflow</span>
-                <p className="text-xl font-semibold mt-2 text-negative">₦ 5,850,700</p>
+                <p className="text-xl font-semibold mt-2 text-negative">₦ {currencyFormat(totalDebit)}</p>
             </div>
             <div className="p-2 px-4 rounded-sm shadow-md bg-lightGray min-w-48">
                 <span className="text-gray-400 text-sm">Transactions</span>
@@ -41,7 +43,7 @@ const Transaction = () => {
                     <section className="flex flex-col gap-2 h-[50svh]">
                         <div className="border-b pb-1">
                             <h4 className="text-sm text-primaryLight font-medium">Amount</h4>
-                            <div className="text-lg font-semibold">₦ {active?.amount}</div>
+                            <div className="text-lg font-semibold">₦ {currencyFormat(active?.amount)}</div>
                         </div>
                         <div className="border-b pb-1">
                             <h4 className="text-sm text-primaryLight font-medium">Sender Details</h4>
@@ -49,7 +51,7 @@ const Transaction = () => {
                         </div>
                         <div className="border-b pb-1">
                             <h4 className="text-sm text-primaryLight font-medium">Transaction Type</h4>
-                            <div className="text-sm font-medium"> {active?.transactionType} </div>
+                            <div className="text-sm font-medium capitalize"> {active?.transactionType} - {active?.type} </div>
                         </div>
                         <div className="border-b pb-1">
                             <h4 className="text-sm text-primaryLight font-medium">Transaction Number</h4>

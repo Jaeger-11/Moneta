@@ -1,25 +1,14 @@
 import { TransferIcon, InvestIcon } from "./Icons"
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { TransactionType } from "../interface";
 import { currencyFormat } from "../utils";
 import { useDispatch, useSelector } from "react-redux";
 import { getTransactions, setActive } from "../features/transactionSlice";
-
-
-// interface ChildProps {
-//     data: TransactionType[];
-//     setActive: React.Dispatch<React.SetStateAction<TransactionType | undefined>>;
-// }
+import { AppDispatch } from "../store";
 
 const Transactions = () => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const { transactions, active } = useSelector((state:any) => state.transaction)
-
-    // useEffect(() => {
-    //     axios.get('/data.json')
-    //     .then(res => setTransactions(res.data))
-    //     .catch(err => console.log(err))
-    // }, [])
 
     useEffect(() => {
         dispatch(getTransactions());
@@ -35,7 +24,7 @@ const Transactions = () => {
             transactions.map((transaction:TransactionType, index:number) => {
                 const { date, description, type, amount, id } = transaction
                 return (
-                    <div key={index} onClick={() => switchActive(id)} className={`${transaction === active && 'bg-primaryLight text-white hover:bg-primaryLight'} border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer`}>
+                    <div key={index} onClick={() => switchActive(id)} className={`${transaction === active && 'bg-primaryLight [&_span]:text-dark text-white hover:bg-primaryLight [&_.amount]:text-white'} border-b w-full p-1.5 rounded-sm grid grid-cols-3 items-center hover:bg-lightGray cursor-pointer`}>
                         <div className="col-span-2 flex gap-2 items-center ">
                             <div className="size-7 rounded-full bg-primaryLight [&_svg]:size-4 flex justify-center items-center">
                                 { type.toLowerCase() === 'debit' ? <TransferIcon/> : <InvestIcon/>}
@@ -45,7 +34,7 @@ const Transactions = () => {
                                 <span className="text-gray-400 text-xs font-semibold leading-tight">{date.slice(0,10)}</span>
                             </p>
                         </div>
-                        <p className={`text-right font-semibold ${type.toLowerCase() === 'debit' ? 'text-negative' : 'text-positive'}`}>₦ {currencyFormat(amount)}</p>
+                        <p className={`text-right amount font-semibold ${type.toLowerCase() === 'debit' ? 'text-negative' : 'text-positive'}`}>₦ {currencyFormat(amount)}</p>
                     </div>
                 )
             })

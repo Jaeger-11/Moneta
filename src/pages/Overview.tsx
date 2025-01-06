@@ -41,7 +41,7 @@ const Overview = () => {
             </div>
           </section>
 
-          <div className="flex-1 border">
+          <div className="flex-1 bg-lightGray">
             <RecentTransactions/>
           </div>
         </section>

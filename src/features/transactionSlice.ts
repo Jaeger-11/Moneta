@@ -39,11 +39,6 @@ const transactionSlice = createSlice({
     name: 'transaction',
     initialState,
     reducers: {
-        setTransactions: (state, action) => {
-            state.transactions = action.payload
-            state.totalTransactions = action.payload.length
-            
-        },
         setActive: (state, action) => {
             const selected:TransactionType = state.transactions.find((item:TransactionType) => item.id === action.payload) || state.transactions[0]
             state.active = selected
@@ -57,7 +52,9 @@ const transactionSlice = createSlice({
         })
         .addCase(getTransactions.fulfilled, (state, action) => {
             state.loading = false;
-            state.transactions = action.payload;
+            state.transactions = action.payload.sort((a: TransactionType, b: TransactionType) =>
+                new Date(b.date).getTime() - new Date(a.date).getTime()
+            );
             state.totalTransactions = action.payload.length;
             state.active = action.payload[0]
         })
@@ -69,6 +66,6 @@ const transactionSlice = createSlice({
 })
 
 
-export const { setTransactions, setActive } = transactionSlice.actions;
+export const { setActive } = transactionSlice.actions;
 
 export default transactionSlice.reducer;

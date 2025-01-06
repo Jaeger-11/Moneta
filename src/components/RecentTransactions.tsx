@@ -1,10 +1,18 @@
 import { TransactionType } from "../interface";
 import { TransferIcon, InvestIcon } from "./Icons"
 import { currencyFormat } from "../utils";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { AppDispatch } from "../store";
+import { getTransactions } from "../features/transactionSlice";
 
 const RecentTransactions = () => {
+    const dispatch = useDispatch<AppDispatch>();
     const { transactions } = useSelector((state:any) => state.transaction);
+
+    useEffect(() => {
+        dispatch(getTransactions());
+    }, [])
 
     return (
     <div className="p-2 lg:p-4">
